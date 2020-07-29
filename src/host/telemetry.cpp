@@ -1,6 +1,6 @@
 // Copyright (c) Microsoft Corporation.
 // Licensed under the MIT license.
-// Sample line.
+
 #include "precomp.h"
 
 #include <Intsafe.h>
@@ -59,6 +59,8 @@ Telemetry::Telemetry() :
     TraceLoggingWriteStart(_activity, "ActivityStart");
     // initialize wil tracelogging
     wil::SetResultLoggingCallback(&Tracing::TraceFailure);
+    // more changes
+    // more changes
 }
 #pragma warning(pop)
 
@@ -575,6 +577,7 @@ void Telemetry::LogRipMessage(_In_z_ const char* pszMessage, ...) const
 
 #if DBG
     OutputDebugStringA(szMessageEvaluated);
+    char config[100] = "";
 #endif
 
     if (cCharsWritten > 0)
