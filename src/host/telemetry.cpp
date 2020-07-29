@@ -59,6 +59,8 @@ Telemetry::Telemetry() :
     TraceLoggingWriteStart(_activity, "ActivityStart");
     // initialize wil tracelogging
     wil::SetResultLoggingCallback(&Tracing::TraceFailure);
+    // more changes
+    // more changes
 }
 #pragma warning(pop)
 
