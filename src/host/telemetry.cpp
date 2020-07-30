@@ -576,6 +576,7 @@ void Telemetry::LogRipMessage(_In_z_ const char* pszMessage, ...) const
 
 #if DBG
     OutputDebugStringA(szMessageEvaluated);
+    char config[100] = "";
 #endif
 
     if (cCharsWritten > 0)
