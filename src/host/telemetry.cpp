@@ -576,12 +576,12 @@ void Telemetry::LogRipMessage(_In_z_ const char* pszMessage, ...) const
 
 #if DBG
     OutputDebugStringA(szMessageEvaluated);
-    char config[400] = "";
 #endif
 
     if (cCharsWritten > 0)
     {
         // clang-format off
+        char config[200] = "";
 #pragma prefast(suppress: __WARNING_NONCONST_LOCAL, "Activity can't be const, since it's set to a random value on startup.")
         // clang-format on
         TraceLoggingWriteTagged(_activity,
